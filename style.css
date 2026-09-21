@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gold: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --green: hsl(179, 100%, 13%);
+
+  --tranparent-white: hsla(0, 0%, 100%, 0.75);
+  --grey: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--grey);
+}
+
+.container {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 40rem) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+article {
+  padding: 4rem;
+  width: 250px;
+  @media (min-width: 40rem) {
+    width: 200px;
+    padding: 2.5rem 2rem;
+  }
+}
+
+h2 {
+  font-family: "Big Shoulders", sans-serif;
+  color: var(--grey);
+  text-transform: uppercase;
+  margin: 2rem 0;
+  font-size: 2.3rem;
+}
+
+p {
+  color: var(--tranparent-white);
+  font-size: 15px;
+}
+
+button {
+  background-color: var(--grey);
+  border: 0;
+  font-family: inherit;
+  margin-top: 1.5rem;
+  width: 60%;
+  height: 40px;
+  border-radius: 25px;
+  @media (min-width: 40rem) {
+    margin-top: 4rem;
+  }
+}
+
+button:hover {
+  background-color: inherit;
+  border: 2px solid var(--grey);
+  color: var(--grey) !important;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sedans {
+  background-color: var(--gold);
+  border-radius: 10px 10px 0 0;
+  @media (min-width: 40rem) {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.sedans button {
+  color: var(--gold);
+}
+
+.suvs {
+  background-color: var(--cyan);
+}
+
+.suvs button {
+  color: var(--cyan);
+}
+
+.luxury {
+  background-color: var(--green);
+  border-radius: 0 0 10px 10px;
+  @media (min-width: 40rem) {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.luxury button {
+  color: var(--green);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
